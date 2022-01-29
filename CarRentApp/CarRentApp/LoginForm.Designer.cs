@@ -78,6 +78,8 @@ namespace CarRentApp
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(200, 29);
             this.tbPassword.TabIndex = 4;
+            this.tbPassword.MouseLeave += new System.EventHandler(this.tbPassword_MouseLeave);
+            this.tbPassword.Move += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnLogin
             // 
