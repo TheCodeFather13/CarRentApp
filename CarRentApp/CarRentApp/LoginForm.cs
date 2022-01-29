@@ -17,6 +17,21 @@ namespace CarRentApp
             InitializeComponent();
         }
 
-       
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(string.IsNullOrEmpty(tbUsername.Text))
+            {
+                MessageBox.Show("Please fill username");
+                tbUsername.Select();
+            }
+
+            if (string.IsNullOrEmpty(tbPassword.Text))
+            {
+                MessageBox.Show("Please fill password");
+                tbUsername.Select();
+            }
+
+            // MessageBox.Show(tbUsername.Text + " " + tbPassword.Text);
+        }
     }
 }

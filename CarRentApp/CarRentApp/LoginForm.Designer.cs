@@ -50,7 +50,7 @@ namespace CarRentApp
             // IUsername
             // 
             this.IUsername.AutoSize = true;
-            this.IUsername.Location = new System.Drawing.Point(632, 12);
+            this.IUsername.Location = new System.Drawing.Point(661, 12);
             this.IUsername.Name = "IUsername";
             this.IUsername.Size = new System.Drawing.Size(97, 24);
             this.IUsername.TabIndex = 1;
@@ -59,7 +59,7 @@ namespace CarRentApp
             // IPassword
             // 
             this.IPassword.AutoSize = true;
-            this.IPassword.Location = new System.Drawing.Point(653, 115);
+            this.IPassword.Location = new System.Drawing.Point(666, 115);
             this.IPassword.Name = "IPassword";
             this.IPassword.Size = new System.Drawing.Size(92, 24);
             this.IPassword.TabIndex = 2;
@@ -67,14 +67,14 @@ namespace CarRentApp
             // 
             // tbUsername
             // 
-            this.tbUsername.Location = new System.Drawing.Point(606, 63);
+            this.tbUsername.Location = new System.Drawing.Point(615, 62);
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(200, 29);
             this.tbUsername.TabIndex = 3;
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(606, 165);
+            this.tbPassword.Location = new System.Drawing.Point(615, 164);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(200, 29);
             this.tbPassword.TabIndex = 4;
@@ -88,6 +88,7 @@ namespace CarRentApp
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // LoginForm
             // 
