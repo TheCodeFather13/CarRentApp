@@ -19,14 +19,18 @@ namespace CarRentApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(tbUsername.Text + " " + tbPassword.Text);        
+            MessageBox.Show(Utils.HashPassword(tbUsername.Text) + " " + tbUsername.Text);
+            var mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Hide();
         }  
 
         private void tbPassword_MouseLeave(object sender, EventArgs e)
         {         
             if (string.IsNullOrEmpty(tbUsername.Text) || string.IsNullOrEmpty(tbPassword.Text))
             {
-                 // MessageBox.Show("Please fill form");             
+                 // MessageBox.Show("Please fill form");
+                 
             }
             else
             {
