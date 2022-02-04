@@ -24,19 +24,34 @@ namespace CarRentApp
 
         private void tbPassword_MouseLeave(object sender, EventArgs e)
         {         
-            if (string.IsNullOrEmpty(tbUsername.Text))
+            if (string.IsNullOrEmpty(tbUsername.Text) || string.IsNullOrEmpty(tbPassword.Text))
             {
-                MessageBox.Show("Please fill username");
-                tbUsername.Select();
+                 // MessageBox.Show("Please fill form");             
+            }
+            else
+            {
+               btnLogin.Enabled = true;
+               btnLogin.Select();
             }
 
-            if (string.IsNullOrEmpty(tbPassword.Text))
+            
+            
+        }
+
+        private void tbUsername_TextChanged(object sender, EventArgs e)
+        {
+            //if (string.IsNullOrEmpty(tbUsername.Text))
+            //{
+            //    tbUsername.Text = "Please fill username";
+            //}
+        }
+
+        private void tbUsername_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbUsername.Text))
             {
-                MessageBox.Show("Please fill password");
-                tbUsername.Select();
+                tbUsername.Text = "Please fill username";
             }
-            btnLogin.Enabled = true;
-            btnLogin.Select();
         }
     }
 }
