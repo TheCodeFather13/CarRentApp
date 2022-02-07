@@ -16,5 +16,24 @@ namespace CarRentApp
         {
             InitializeComponent();
         }
+
+        private void btnResetPassword_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var id = dgvUserList.SelectedRows[0].Cells["id"].Value;
+                var user = 1;
+                // Query database for record
+                // dbContext.Users.FirstOrDefault(x => x.id == id);
+                var hashPassword = Utils.DefaultHashPassword();
+                // User.Password = hashPassword;
+                // dbContext.SaveChanges();
+                MessageBox.Show("Password has been resert");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Try again!");
+            }
+        }
     }
 }
