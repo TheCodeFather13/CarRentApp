@@ -24,6 +24,7 @@ namespace CarRentApp
 
         public MainWindow(LoginForm login, string user)
         {
+            InitializeComponent();
             _login = login;
             this.user = user;
             roleName = "admin"; // get role from user

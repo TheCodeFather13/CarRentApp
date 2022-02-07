@@ -39,8 +39,7 @@ namespace CarRentApp
             }
             catch (Exception)
             {
-                MessageBox.Show("Something gone wrong!Please contact administration");
-               
+                MessageBox.Show("Something gone wrong!Please contact administration");              
             }           
         }  
 
@@ -48,8 +47,8 @@ namespace CarRentApp
         {         
             if (string.IsNullOrEmpty(tbUsername.Text) || string.IsNullOrEmpty(tbPassword.Text))
             {
-                 // MessageBox.Show("Please fill form");
-                 
+                // MessageBox.Show("Please fill form");
+                tbPassword.Text = "";
             }
             else
             {
