@@ -21,7 +21,9 @@ namespace CarRentApp
         {
             if(!Utils.FormIsOpen("ManageUsers"))
             {
-                MessageBox.Show("Open the window");
+                var manageUsers = new ManageUsers();
+               // manageUsers.MdiParent = this;
+                manageUsers.Show();
             }
         }
     }
