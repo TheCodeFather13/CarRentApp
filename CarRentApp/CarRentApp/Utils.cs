@@ -32,6 +32,13 @@ namespace CarRentApp
             return stringBuilder.ToString();
         }
 
+        public static string DefaultHashPassword()
+        {
+            var defaultHash = HashPassword("qwerty");
+            return defaultHash;
+        }
+
+
 
     }
 }
