@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CarRentDbContext.cs" />
     <Compile Include="Entities\CarRentalRecord.cs" />
     <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\TypesOfCar.cs" />
