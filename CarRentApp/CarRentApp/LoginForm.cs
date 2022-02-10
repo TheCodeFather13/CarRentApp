@@ -19,18 +19,25 @@ namespace CarRentApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            var carRentDbContext = new CarRentDbContext();
+
+
             try
             {
                 var name = tbUsername.Text;
                 var password = tbPassword.Text;
                 var hashPassword = Utils.HashPassword(password);
                 //Check for matching username, password and active flag
-                var user = "Michael";
+                var userName = tbUsername.Text.Trim();
+                var user = carRentDbContext.Users.FirstOrDefault
+                    (x => x.UserName == userName 
+                       && x.Password == hashPassword 
+                       && x.IsActive == true);
                 if(user == null)
                 {
                     MessageBox.Show("Please provide valid credentials");
                 }
-                else
+                else // user exists
                 {                
                   var mainWindow = new MainWindow(this, user);
                   mainWindow.Show();
