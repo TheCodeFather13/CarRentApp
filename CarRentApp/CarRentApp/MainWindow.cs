@@ -28,7 +28,7 @@ namespace CarRentApp
             _login = login;
             this.user = user;
             roleName = "admin"; // get role from user
-            MessageBox.Show(this.user + " " + roleName);
+           // MessageBox.Show(this.user + " " + roleName);
         }
 
         private void manageUsersToolStripMenuItem_Click(object sender, EventArgs e)
