@@ -25,8 +25,7 @@
             {
                UserId = 1,
                RoleId = 1,
-            });
-           
+            });        
             dbContext.SaveChanges();
  }
         

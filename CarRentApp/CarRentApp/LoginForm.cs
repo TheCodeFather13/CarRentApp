@@ -40,7 +40,7 @@ namespace CarRentApp
                 }
                 else // user exists
                 {                
-                  var mainWindow = new MainWindow(this, user);
+                  var mainWindow = new MainWindowForm(this, user);
                   mainWindow.Show();
                   this.Hide();
                 }

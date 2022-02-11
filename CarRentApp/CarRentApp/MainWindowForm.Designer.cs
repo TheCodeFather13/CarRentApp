@@ -1,7 +1,7 @@
 ﻿
 namespace CarRentApp
 {
-    partial class MainWindow
+    partial class MainWindowForm
     {
         /// <summary>
         /// Required designer variable.

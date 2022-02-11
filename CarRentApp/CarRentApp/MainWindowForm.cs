@@ -11,18 +11,18 @@ using System.Windows.Forms;
 
 namespace CarRentApp
 {
-    public partial class MainWindow : Form
+    public partial class MainWindowForm : Form
     {
         private LoginForm _login;
         public string roleName;
         public User user;
 
-        public MainWindow()
+        public MainWindowForm()
         {
             InitializeComponent();
         }
 
-        public MainWindow(LoginForm login, User user)
+        public MainWindowForm(LoginForm login, User user)
         {
             InitializeComponent();
             _login = login;
