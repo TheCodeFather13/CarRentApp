@@ -12,6 +12,9 @@ namespace CarRentApp
 {
     public partial class ManageUsers : Form
     {
+        private CarRentDbContext _dbContext = new CarRentDbContext();
+        private int _id;
+
         public ManageUsers()
         {
             InitializeComponent();
@@ -22,7 +25,7 @@ namespace CarRentApp
             try
             {
                 var id = dgvUserList.SelectedRows[0].Cells["id"].Value;
-                var user = 1;
+                // var user = 1;
                 // Query database for record
                 // dbContext.Users.FirstOrDefault(x => x.id == id);
                 var hashPassword = Utils.DefaultHashPassword();
@@ -34,6 +37,30 @@ namespace CarRentApp
             {
                 MessageBox.Show("Try again!");
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void PopulateGrid()
+        {
+            var users = _dbContext.Users.Select(x => new 
+            { x.Id, 
+              x.UserName, 
+              // RoleName = x.UserRoles.FirstOrDefault().Role.Name
+              x.UserRoles.FirstOrDefault().Role.Name,
+              x.IsActive}).ToList();
+            dgvUserList.DataSource = users;
+            dgvUserList.Columns["Id"].Visible = false;
+            dgvUserList.Columns["IsActive"].HeaderText = "Active";
+            dgvUserList.Columns["Name"].HeaderText = "Role Name";
+        }
+
+        private void ManageUsers_Load(object sender, EventArgs e)
+        {
+          PopulateGrid();
         }
     }
 }

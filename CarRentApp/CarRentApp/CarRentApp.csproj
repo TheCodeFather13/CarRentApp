@@ -74,11 +74,11 @@
     <Compile Include="MainWindowForm.Designer.cs">
       <DependentUpon>MainWindowForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ManageUsers.cs">
+    <Compile Include="ManageUsersForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManageUsers.Designer.cs">
-      <DependentUpon>ManageUsers.cs</DependentUpon>
+    <Compile Include="ManageUsersForm.Designer.cs">
+      <DependentUpon>ManageUsersForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\202202091642561_FirstMigration.cs" />
     <Compile Include="Migrations\202202091642561_FirstMigration.designer.cs">
@@ -102,8 +102,8 @@
     <EmbeddedResource Include="MainWindowForm.resx">
       <DependentUpon>MainWindowForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ManageUsers.resx">
-      <DependentUpon>ManageUsers.cs</DependentUpon>
+    <EmbeddedResource Include="ManageUsersForm.resx">
+      <DependentUpon>ManageUsersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202202091642561_FirstMigration.resx">
       <DependentUpon>202202091642561_FirstMigration.cs</DependentUpon>

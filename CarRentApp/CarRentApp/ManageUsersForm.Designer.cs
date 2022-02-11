@@ -46,6 +46,7 @@ namespace CarRentApp
             this.btnRefresh.TabIndex = 0;
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnAddNewUser
             // 
@@ -98,6 +99,7 @@ namespace CarRentApp
             this.Controls.Add(this.btnRefresh);
             this.Name = "ManageUsers";
             this.Text = "ManageUsers";
+            this.Load += new System.EventHandler(this.ManageUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserList)).EndInit();
             this.ResumeLayout(false);
 
