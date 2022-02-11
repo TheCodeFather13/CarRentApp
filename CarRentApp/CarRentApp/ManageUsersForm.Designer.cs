@@ -57,6 +57,7 @@ namespace CarRentApp
             this.btnAddNewUser.TabIndex = 1;
             this.btnAddNewUser.Text = "Add New User";
             this.btnAddNewUser.UseVisualStyleBackColor = true;
+            this.btnAddNewUser.Click += new System.EventHandler(this.btnAddNewUser_Click);
             // 
             // btnResetPassword
             // 
