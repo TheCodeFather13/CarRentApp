@@ -78,6 +78,7 @@ namespace CarRentApp
             this.btnActivateDeactivateUser.TabIndex = 3;
             this.btnActivateDeactivateUser.Text = "Active / Deactive User";
             this.btnActivateDeactivateUser.UseVisualStyleBackColor = true;
+            this.btnActivateDeactivateUser.Click += new System.EventHandler(this.btnActivateDeactivateUser_Click);
             // 
             // dgvUserList
             // 
