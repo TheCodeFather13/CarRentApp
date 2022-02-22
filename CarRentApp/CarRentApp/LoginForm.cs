@@ -15,7 +15,7 @@ namespace CarRentApp
         public LoginForm()
         {
             InitializeComponent();
-            tbUsername.Text = Utils.HashPassword("1");
+            // tbUsername.Text = Utils.HashPassword("1");
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -67,6 +67,9 @@ namespace CarRentApp
 
         private void tbUsername_TextChanged(object sender, EventArgs e)
         {
+          
+
+
             //if (string.IsNullOrEmpty(tbUsername.Text))
             //{
             //    tbUsername.Text = "Please fill username";
@@ -79,6 +82,11 @@ namespace CarRentApp
             {
                 tbUsername.Text = "Please fill username";
             }
+        }
+
+        private void IUsername_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

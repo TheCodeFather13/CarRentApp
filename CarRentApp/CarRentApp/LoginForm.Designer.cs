@@ -55,6 +55,7 @@ namespace CarRentApp
             this.IUsername.Size = new System.Drawing.Size(97, 24);
             this.IUsername.TabIndex = 1;
             this.IUsername.Text = "Username";
+            this.IUsername.Click += new System.EventHandler(this.IUsername_Click);
             // 
             // IPassword
             // 

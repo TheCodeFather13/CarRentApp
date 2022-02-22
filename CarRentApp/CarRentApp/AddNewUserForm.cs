@@ -29,7 +29,6 @@ namespace CarRentApp
 
         private void AddNewUserForm_Load(object sender, EventArgs e)
         {
-
             var roles = _dbContext.Roles.ToList();
             cbRole.DataSource = roles;
             cbRole.ValueMember = "Id";
