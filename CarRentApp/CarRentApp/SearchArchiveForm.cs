@@ -37,5 +37,25 @@ namespace CarRentApp
                             }).ToList();
             dgvCarRents.DataSource = carRentalRecord;
         }
+
+        private void btnProcess_Click(object sender, EventArgs e)
+        {
+            var searchText = tbSearch.Text.Trim(); 
+            if(!string.IsNullOrEmpty(searchText))
+            {
+                var carRentalRecord = _dbContext.CarRentalRecords
+                            .Where(x => x.CustomerName.Contains(searchText) 
+                            || x.TypesOfCar.Make.Contains(searchText))                                                                              
+                            .Select(x => new
+                            {
+                                x.CustomerName,
+                                x.Cost,
+                                x.DateRented,
+                                x.DateReturned,
+                                Car = x.TypesOfCar.Make + " " + x.TypesOfCar.Model
+                            }).ToList();
+                dgvCarRents.DataSource = carRentalRecord;
+            }
+        }
     }
 }

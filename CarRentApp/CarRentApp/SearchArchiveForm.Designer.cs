@@ -64,6 +64,7 @@ namespace CarRentApp
             this.btnProcess.Text = "Process";
             this.btnProcess.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnProcess.UseVisualStyleBackColor = true;
+            this.btnProcess.Click += new System.EventHandler(this.btnProcess_Click);
             // 
             // dgvCarRents
             // 
