@@ -107,5 +107,15 @@ namespace CarRentApp
             window.Show();
             this.Hide();
         }
+
+        private void viewArchiveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(!Utils.FormIsOpen("SearchArchiveForm"))
+            {
+               var searchArchiveForm = new SearchArchiveForm();
+                searchArchiveForm.Show();
+            }
+           
+        }
     }
 }

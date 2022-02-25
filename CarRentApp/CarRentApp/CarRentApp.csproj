@@ -107,6 +107,12 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchArchiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SearchArchiveForm.Designer.cs">
+      <DependentUpon>SearchArchiveForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils.cs" />
     <EmbeddedResource Include="AddEditRentalForm.resx">
       <DependentUpon>AddEditRentalForm.cs</DependentUpon>
@@ -142,6 +148,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SearchArchiveForm.resx">
+      <DependentUpon>SearchArchiveForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
